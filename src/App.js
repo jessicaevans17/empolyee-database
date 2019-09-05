@@ -1,9 +1,15 @@
-import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import React, { Component } from "react"
+import NavBar from "./components/NavBar"
+import { BrowswerRouter as Router, Switch, Route } from "react-router-dom"
 
 class App extends Component {
   render() {
-    return <HelloWorld />
+    return (
+      <>
+        <NavBar />
+        <div>Hello!</div>
+      </>
+    )
   }
 }
 
