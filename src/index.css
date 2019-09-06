@@ -1,5 +1,10 @@
 :root {
   font: 16px / 1 sans-serif;
+  --color1: #fc6a3c;
+  --color2: #51f0f0;
+  --color3: #90afbc;
+  --color4: #0e0d0d;
+  --color5: #f9f7f7;
 }
 
 html {
@@ -9,4 +14,58 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: var(--color5);
+}
+
+.nav-bar {
+  background-color: var(--color1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.directory-title,
+.employee-card {
+  text-align: center;
+}
+
+.directory-title {
+  margin-bottom: 5rem;
+}
+
+.employee-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border: solid var(--color4) 2px;
+  background-color: var(--color2);
+  margin: 1rem;
+  height: 15rem;
+  width: 15rem;
+}
+
+.employee-info {
+  background-color: var(--color5);
+  margin: 1rem 0rem;
+  padding: 1rem;
+  height: 6rem;
+  width: 75%;
+}
+
+img {
+  margin-top: 1rem;
+  border-radius: 4rem;
+  height: 7rem;
 }
