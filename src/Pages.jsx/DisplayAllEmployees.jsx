@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
 import CatPic from "../images/businesscat.jpeg"
+import { Link } from "react-router-dom"
 
 const DisplayAllEmployees = () => {
   const [employeeData, setEmployeeData] = useState([])
@@ -22,16 +23,24 @@ const DisplayAllEmployees = () => {
       <main className="employee-section">
         {employeeData.map((item, i) => {
           return (
-            <section className="employee-card" key={i}>
-              <img src={CatPic} alt="Business Cat" />
-              <section className="employee-info">
-                <h2 className="first-last-name">
-                  {" "}
-                  {item.firstName} {item.lastName}
-                </h2>
-                <h3 className="job-title">{item.jobTitle}</h3>
+            <Link
+              to={{
+                pathname: `/${item.id}`,
+                state: { item }
+              }}
+            >
+              {" "}
+              <section className="employee-card" key={i}>
+                <img src={CatPic} alt="Business Cat" />
+                <section className="employee-info">
+                  <h2 className="first-last-name">
+                    {" "}
+                    {item.firstName} {item.lastName}
+                  </h2>
+                  <h3 className="job-title">{item.jobTitle}</h3>
+                </section>
               </section>
-            </section>
+            </Link>
           )
         })}
       </main>

@@ -14,11 +14,7 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/" component={DisplayAllEmployees}></Route>
-            <Route
-              exact
-              path="/display-one-employee"
-              component={DisplayOneEmployee}
-            ></Route>
+            <Route exact path="/:id" component={DisplayOneEmployee}></Route>
             <Route exact path="/add-employee" component={AddEmployee}></Route>
           </Switch>
         </Router>
