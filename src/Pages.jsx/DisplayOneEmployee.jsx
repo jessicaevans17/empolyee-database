@@ -4,6 +4,7 @@ import CatPic from "../images/businesscat.jpeg"
 
 const DisplayOneEmployee = props => {
   const data = props.location.state.item
+  console.log(data)
   const [employeeData, setEmployeeData] = useState([])
   const [birthday, setBirthday] = useState("")
 
@@ -13,9 +14,7 @@ const DisplayOneEmployee = props => {
     )
     console.log(resp.data)
     setEmployeeData(resp.data)
-    setBirthday(resp.data.birthday)
   }
-  console.log(birthday)
 
   useEffect(() => {
     fetchData()
