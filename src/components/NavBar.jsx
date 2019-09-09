@@ -4,7 +4,10 @@ import { Link } from "react-router-dom"
 const NavBar = () => {
   return (
     <nav className="nav-bar">
-      <h1>Business Company</h1>
+      <Link to="/">
+        {" "}
+        <h1 className="company-logo">Business Company</h1>
+      </Link>
       <section className="menu">
         <Link to="/">
           <section className="nav-link">Display All Employees</section>
