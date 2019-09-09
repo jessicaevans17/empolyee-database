@@ -69,12 +69,3 @@ img {
   border-radius: 4rem;
   height: 7rem;
 }
-
-.add-employee-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.date-picker {
-  display: flex;
-}
